@@ -1,0 +1,34 @@
+# Checks the Instagram blog, Instagram's latest updates page and the TikTok
+# newsroom every morning, and commits any new platform updates to data/updates.js.
+name: Platform updates
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 7am UTC daily
+  workflow_dispatch: {}   # run by hand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm run fetch-updates
+      - name: Commit new updates
+        run: |
+          if git diff --quiet data/updates.js; then
+            echo "No new updates"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/updates.js
+          git commit -m "Update platform news"
+          git push
