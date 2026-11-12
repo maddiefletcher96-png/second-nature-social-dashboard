@@ -1,6 +1,8 @@
 # Second Nature social dashboard
 
-A social media dashboard for Second Nature, the hometel brand from Lamington Group. It brings Instagram and TikTok performance for Chiswick, Belfast and Southampton into one place. It follows social activity through to website visits, bookings and The Fold sign-ups, and it turns each month into a report laid out like the Second Nature deck.
+A demonstration of what a live social media dashboard could do for Second Nature, the hometel brand from Lamington Group. It shows how Instagram and TikTok performance for Chiswick, Belfast and Southampton could sit in one place. It also shows how social activity could be followed through to website visits, bookings and The Fold sign-ups, and how each month could become a report laid out like the Second Nature deck.
+
+> **This is not a live dashboard.** Nothing here is connected to Instagram, TikTok, the website or the booking system. It's a working prototype built from past reports and sample data, made to show what a live version could do before the connectors exist.
 
 ![Overview page with headline stats, views over time and 2026 goals](assets/screenshots/overview.png)
 
@@ -12,9 +14,15 @@ Before this dashboard, the monthly picture lived in several places:
 - the social media strategy
 - the platforms' own analytics
 
-Each answered a different question, and none showed whether social was bringing in stays. This dashboard sets all of them against the strategy's goals and makes the monthly report from the same numbers.
+Each answered a different question, and none showed whether social was bringing in stays. This project shows what it would look like to set all of them against the strategy's goals and to make the monthly report from the same numbers.
 
-It is a complete, working front end. Instagram figures from November 2025 to October 2026 are real, taken from the follower growth tracker and the July, September and October 2026 monthly reports. The goals, pillars, personas and series come from the social media strategy. Website, booking, inbox and partner figures are illustrative and stand in for the live connectors, and the dashboard says so in a banner. [docs/DATA.md](docs/DATA.md) lists where every figure comes from.
+Every page, filter, chart and report works, so the ideas can be tried rather than just described. The data behind it is fixed, not live:
+- **From past records:** Instagram figures from November 2025 to October 2026 come from the follower growth tracker and the July, September and October 2026 monthly reports.
+- **From the strategy:** the goals, pillars, personas and series come from the social media strategy.
+- **Illustrative:** website, booking, inbox and partner figures, and the earlier TikTok figures, are sample data that show what the connectors would provide. The dashboard says so in a banner.
+- **Written by hand:** the monthly successes and improvements were written for January to October 2026 and don't update on their own.
+
+[docs/DATA.md](docs/DATA.md) lists where every figure comes from.
 
 ## Key features
 
@@ -200,9 +208,12 @@ The dashboard and reports follow the Second Nature brand book:
 - **Reports:** they follow the deck (Template V2), with a Dark Green cover and Warm Grey content pages framed by the split SECOND / NATURE wordmark.
 - **Highlights:** tinted tiles with an icon rather than border lines.
 
-## Next steps
+## What it would take to go live
 
-These would come next, and none is needed for the dashboard to work as it is:
-- **Live data:** connect the Instagram, TikTok, website and booking connectors so the illustrative figures become live ones.
-- **Shared team inputs:** move notes and targets from the browser to a shared store, so the whole team sees the same ones.
-- **Automatic monthly insights:** write each new month's successes and improvements from the data.
+This project shows the idea. Making it a live dashboard would need:
+- **Live data:** connections to the Instagram and TikTok APIs, website analytics and the booking system in place of the fixed and illustrative data.
+- **A shared store:** a backend for team inputs (notes, targets, handled messages) so everyone sees the same ones. At the moment they're saved in each person's browser.
+- **Sign-in:** to keep business figures private. As a public static site, anyone with the link can see it.
+- **Automatic monthly insights:** successes and improvements written from each new month's data, either by rules in the dashboard or by an AI step run monthly. At the moment they're written by hand.
+
+The Knowledge Hub is the one part that already updates itself. A GitHub Action fetches new platform updates every morning.
