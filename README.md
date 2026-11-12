@@ -2,7 +2,7 @@
 
 A demonstration of what a live social media dashboard could do for Second Nature, the hometel brand from Lamington Group. It shows how Instagram and TikTok performance for Chiswick, Belfast and Southampton could sit in one place. It also shows how social activity could be followed through to website visits, bookings and The Fold sign-ups, and how each month could become a report laid out like the Second Nature deck.
 
-> **This is not a live dashboard.** Nothing here is connected to Instagram, TikTok, the website or the booking system. It's a working prototype built from past reports and sample data, made to show what a live version could do before the connectors exist.
+> **This is a demo, not a live dashboard.** Nothing here is connected to Instagram, TikTok, the website or the booking system, and the project has no API keys. It's a working prototype built from past reports and sample data, made to show what a live version could do before the connectors exist. Facebook and Facebook Ads (Meta Ads) are planned for a later stage, so that the finished dashboard covers every channel.
 
 **Try the demo:** https://maddiefletcher96-png.github.io/second-nature-social-dashboard/
 
@@ -213,7 +213,9 @@ The dashboard and reports follow the Second Nature brand book:
 ## What it would take to go live
 
 This project shows the idea. Making it a live dashboard would need:
-- **Live data:** connections to the Instagram and TikTok APIs, website analytics and the booking system in place of the fixed and illustrative data.
+- **Live data:** connections to the Instagram and TikTok APIs, website analytics and the booking system in place of the fixed and illustrative data. Each connection needs its own API key or access token. The demo has none.
+- **Facebook and Facebook Ads:** a later stage adds Facebook page performance and Meta Ads spend and results, connected through Meta's APIs with an access token. They would join the existing platform filter, the paid vs organic card and the social to stay funnel, so organic and paid activity across Instagram, Facebook and TikTok can be monitored in one place.
+- **Keeping keys private:** API keys can't sit in a public static site like this one. A live version would keep them on a server or in GitHub secrets, never in the page code.
 - **A shared store:** a backend for team inputs (notes, targets, handled messages) so everyone sees the same ones. At the moment they're saved in each person's browser.
 - **Sign-in:** to keep business figures private. As a public static site, anyone with the link can see it.
 - **Automatic monthly insights:** successes and improvements written from each new month's data, either by rules in the dashboard or by an AI step run monthly. At the moment they're written by hand.
