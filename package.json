@@ -1,0 +1,12 @@
+{
+  "name": "second-nature-social-dashboard",
+  "private": true,
+  "type": "module",
+  "description": "Second Nature social dashboard. No build step: open index.html.",
+  "scripts": {
+    "fetch-updates": "node scripts/fetch-updates.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.48.2"
+  }
+}
