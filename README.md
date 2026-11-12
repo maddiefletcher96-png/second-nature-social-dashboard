@@ -4,6 +4,8 @@ A demonstration of what a live social media dashboard could do for Second Nature
 
 > **This is not a live dashboard.** Nothing here is connected to Instagram, TikTok, the website or the booking system. It's a working prototype built from past reports and sample data, made to show what a live version could do before the connectors exist.
 
+**Try the demo:** https://maddiefletcher96-png.github.io/second-nature-social-dashboard/
+
 ![Overview page with headline stats, views over time and 2026 goals](assets/screenshots/overview.png)
 
 ## About the project
