@@ -1,0 +1,126 @@
+/*
+ * Report pages, following the Second Nature deck (Template V2) and brand book.
+ * Pages are a fixed A4 landscape size (1123 x 794 px = 297 x 210 mm) and are
+ * scaled to fit the preview column on screen.
+ */
+.report-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 20px; align-items: start; }
+.export-panel { position: sticky; top: 92px; }
+.toggles { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 6px; font-size: 13px; }
+.toggles label { display: flex; gap: 8px; align-items: center; cursor: pointer; }
+.toggles input { accent-color: var(--moss); }
+.report-preview { --rp-scale: 1; display: grid; gap: 20px; min-width: 0; }
+.rp-shell { width: calc(1123px * var(--rp-scale)); height: calc(794px * var(--rp-scale)); }
+@media (max-width: 900px) {
+  .report-layout { grid-template-columns: 1fr; }
+  .export-panel { position: static; }
+}
+
+.rp {
+  /* Reports always use the light brand palette, whatever the dashboard theme */
+  --ink: #1b3417; --ink-2: #3c4636; --muted: #6c7366; --line: #d8d5cb; --line-strong: #c3c0b5;
+  --surface: #ffffff; --surface-2: #ecebe5; --bg: #f6f5f1; --moss: #3d5a35; --lichen-soft: #e5eadf; --brick-soft: #f3e4e0;
+  --good: #4f7a45; --bad: #9a5245;
+  width: 1123px; height: 794px; transform: scale(var(--rp-scale)); transform-origin: top left;
+  background: #f6f5f1; color: #1b3417; font-family: var(--font); font-size: 13px; line-height: 1.5;
+  padding: 30px 44px 24px; display: flex; flex-direction: column; overflow: hidden;
+  box-shadow: 0 2px 18px rgba(27, 52, 23, .1); border-radius: 4px;
+}
+.rp-dark { background: #1b3417; color: #e4fd9c; }
+
+/* Book-ending wordmark and hairline rules, as in the deck */
+.rp-top { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 20px; padding-bottom: 13px; border-bottom: 1px solid currentColor; }
+.rp-second, .rp-nature { height: 13px; width: auto; display: block; }
+.rp-kicker { text-align: center; font-size: 9.5px; font-weight: 600; letter-spacing: .125em; text-transform: uppercase; opacity: .75; }
+.rp-body { flex: 1; min-height: 0; padding: 28px 0 14px; overflow: hidden; position: relative; }
+.rp-foot { display: flex; justify-content: space-between; border-top: 1px solid currentColor; padding-top: 9px; font-size: 9.5px; letter-spacing: .02em; }
+.rp-num { font-variant-numeric: tabular-nums; }
+
+/* Type */
+.rp-title { font: 400 30px/1.15 var(--font-display); letter-spacing: -.005em; margin: 0 0 18px; }
+.rp-title em, .rp h1 em { font-style: italic; }
+.rp-title.sm { font-size: 23px; margin-bottom: 12px; }
+.rp-small { font-size: 9.5px; font-weight: 600; letter-spacing: .125em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 10px; }
+.rp-intro { font-size: 15px; line-height: 1.65; margin: 0; letter-spacing: .01em; }
+.rp-caption { font-size: 11px; color: var(--muted); margin: 10px 0 0; }
+
+/* Cover and closing */
+.rp-cover .rp-body { display: flex; align-items: center; }
+.rp-cover-text { padding-left: 90px; }
+.rp-cover h1 { font: 400 52px/1.12 var(--font-display); margin: 0 0 22px; letter-spacing: -.01em; }
+.rp-cover .rp-small { color: #e4fd9c; opacity: .8; }
+.rp-closing h1 { font-size: 40px; }
+
+/* Layout inside a page */
+.rp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.rp-cols-summary { grid-template-columns: 1fr 1.1fr; gap: 48px; height: 100%; }
+.rp-cols-sections { gap: 48px; }
+.rp-stack > .rp-section + .rp-section { margin-top: 30px; }
+
+/* Summary text: editable on screen, plain in print */
+.rp .summary-edit {
+  width: 100%; font: 15px/1.65 var(--font); letter-spacing: .01em; color: inherit; background: rgba(255, 255, 255, .55);
+  border: 1px dashed var(--line-strong); border-radius: 6px; padding: 10px 12px; resize: none; height: 330px;
+}
+.rp .summary-print { display: none; }
+
+/* Big numbers, like the deck's "£110m+" slide */
+.rp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.rp-stats-4 { grid-template-columns: repeat(4, 1fr); margin-bottom: 18px; }
+.rp-stat { padding: 12px 14px 10px; background: #fff; border-radius: 12px; }
+.rp-stat .rp-small { margin-bottom: 4px; }
+.rp-num-big { font: 400 28px/1.1 var(--font-display); font-variant-numeric: tabular-nums; }
+.rp-num-big.sm { font-size: 24px; }
+.rp-delta { margin-top: 4px; min-height: 18px; }
+
+/* Goals */
+.rp-goals { display: grid; gap: 9px; }
+.rp-goal .goal-top { font-size: 12px; margin-bottom: 4px; }
+.rp-goal .goal-top b { font-weight: 600; }
+.rp .progress { height: 6px; background: #e3e1d8; }
+.rp .progress .fill { background: #1b3417; }
+.rp .progress.done .fill { background: #9ba898; }
+
+/* Top posts */
+.rp-top-posts { list-style: none; margin: 0; padding: 0; }
+.rp-top-posts { display: grid; gap: 8px; }
+.rp-top-posts li { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; padding: 10px 14px; background: #fff; border-radius: 12px; }
+.rp-rank { font: 400 24px/1 var(--font-display); color: #9ba898; }
+.rp-post-title { font-weight: 600; font-size: 12.5px; }
+.rp-post-stats { text-align: right; font-size: 11px; color: var(--muted); }
+.rp-post-stats b { color: var(--ink); font: 400 18px var(--font-display); }
+
+/* Successes, improvements, notes */
+.rp-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.rp-points li { padding-left: 16px; position: relative; font-size: 11.5px; line-height: 1.5; }
+.rp-points li::before { content: ''; position: absolute; left: 0; top: 6px; width: 7px; height: 7px; background: #9ba898; }
+.rp-points-brick li::before { background: #c4968c; }
+.rp-points b { display: block; font-size: 12px; }
+.rp-points span { color: var(--ink-2); }
+
+/* Actions */
+.rp-actions { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rp-actions li { display: flex; gap: 10px; align-items: center; font-size: 12.5px; }
+.rp-check { width: 16px; height: 16px; border: 1px solid #1b3417; display: grid; place-items: center; font-size: 11px; flex: none; }
+.rp-actions li.done { color: var(--muted); }
+.rp-actions li.done .rp-check { background: #e4fd9c; }
+
+/* Dashboard cards reused inside a report page */
+.rp .card.in-report { border: 0; box-shadow: none; background: none; }
+.rp .card.in-report > .card-head { display: none; }
+.rp .card.in-report > .card-body { padding: 0; }
+.rp .card.in-report .stat { background: #fff; }
+.rp .tbl { font-size: 11.5px; }
+.rp .tbl td { padding: 6px 8px; }
+.rp .tbl th { font-size: 9.5px; letter-spacing: .1em; }
+.rp .prop { background: #fff; }
+
+/* Compact highlight tiles in reports */
+.rp .tiles { gap: 7px; }
+.rp .tile { padding: 8px 12px; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; font-size: 11px; line-height: 1.45; border-radius: 10px; }
+.rp .tile-icon { width: 22px; height: 22px; font-size: 11px; }
+.rp .tile h4 { font-size: 11.5px; margin: 2px 0 1px; }
+
+/* Funnel fits its page */
+.rp .fstep .fbar { max-height: 96px; }
+.rp .card.in-report .legend { margin-bottom: 4px; }
+.rp .sub-h { margin-top: 12px; }

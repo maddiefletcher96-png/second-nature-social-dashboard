@@ -1,0 +1,14 @@
+/* Print / Save as PDF: only the report pages, one A4 landscape page each */
+@page { size: 297mm 210mm; margin: 0; }
+html, body { background: #fff; }
+.rail, .top, #banner, .no-print, .export-panel, .card-actions, .note-hit, .link-btn, .btn, .confetti { display: none !important; }
+.main { margin: 0; }
+.page { padding: 0; }
+.report-layout { display: block; }
+.report-preview { display: block; --rp-scale: 1 !important; }
+.rp-shell { width: 297mm; height: 210mm; break-after: page; page-break-after: always; overflow: hidden; }
+.rp-shell:last-child { break-after: auto; page-break-after: auto; }
+.rp { transform: none !important; width: 297mm; height: 210mm; box-shadow: none; border-radius: 0; }
+.rp .summary-print { display: block; }
+.rp, .rp * { -webkit-print-color-adjust: exact; print-color-adjust: exact; animation: none !important; }
+.tbl tr { break-inside: avoid; }
