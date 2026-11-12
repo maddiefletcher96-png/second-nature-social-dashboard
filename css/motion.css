@@ -1,0 +1,51 @@
+/* Motion. All of it switches off for people who ask for reduced motion. */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes grow-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes grow-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes fade { from { opacity: 0; } }
+@keyframes pop { 0% { transform: scale(0); } 70% { transform: scale(1.5); } 100% { transform: scale(1); } }
+@keyframes sweep { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes fill-in { from { width: 0; } }
+@keyframes glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(228, 253, 156, 0); } 50% { box-shadow: 0 0 0 6px rgba(228, 253, 156, .9); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Page entrance */
+  .card.enter, .rp-shell.enter { animation: rise .55s cubic-bezier(.2, .8, .2, 1) both; }
+
+  /* Cards respond to the pointer */
+  .card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(27, 52, 23, .08); }
+  .rp .card:hover, .card.export-panel:hover { transform: none; box-shadow: none; }
+
+  /* Charts build on first draw */
+  .chart-anim .line[pathLength] { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.1s cubic-bezier(.4, 0, .2, 1) .1s forwards; }
+  .chart-anim .line.dashed, .chart-anim .fill-area { animation: fade 1s ease .3s both; }
+  .chart-anim .pt { transform-box: fill-box; transform-origin: center; animation: pop .45s ease-out both; }
+  .chart-anim .bar-v { transform-box: fill-box; transform-origin: bottom; animation: grow-y .75s cubic-bezier(.2, .8, .2, 1) both; }
+  .chart-anim .bar-h { transform-box: fill-box; transform-origin: left; animation: grow-x .75s cubic-bezier(.2, .8, .2, 1) both; }
+  .chart-anim svg.sweep { animation: sweep 1.1s cubic-bezier(.4, 0, .2, 1) both; }
+  .chart-anim .note-dot { transform-box: fill-box; transform-origin: center; animation: pop .5s ease-out 1.1s both; }
+
+  /* Funnel, progress and meters */
+  .fstep .fbar { transform-origin: bottom; animation: grow-y .8s cubic-bezier(.2, .8, .2, 1) both; }
+  .fstep:nth-child(2) .fbar { animation-delay: .08s; } .fstep:nth-child(3) .fbar { animation-delay: .16s; }
+  .fstep:nth-child(4) .fbar { animation-delay: .24s; } .fstep:nth-child(5) .fbar { animation-delay: .32s; }
+  .fstep:nth-child(6) .fbar { animation-delay: .4s; }
+  .progress .fill { animation: fill-in 1.1s cubic-bezier(.2, .8, .2, 1) .15s both; }
+  .pace-mark { animation: fade .4s ease 1s both; }
+
+  /* Reached goals glow and can be clicked for confetti */
+  [data-celebrate] { cursor: pointer; animation: glow 1.6s ease-in-out .6s 2; border-radius: 10px; }
+
+  /* Small press feedback */
+  .btn, .seg button, .dp-month, .dp-day, .chip, .rail a { transition: transform .12s ease, background .15s ease, color .15s ease; }
+  .btn:active, .seg button:active, .dp-month:active, .dp-day:active, .rail a:active { transform: scale(.96); }
+  .rail a.active svg { animation: pop .35s ease-out; }
+  .dp-panel, .modal { animation: rise .25s cubic-bezier(.2, .8, .2, 1); }
+  .modal-back { animation: fade .2s ease; }
+  .tbl tbody tr { transition: background .15s ease; }
+}
+
+.confetti { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 200; }
+@media print { .confetti { display: none; } }
