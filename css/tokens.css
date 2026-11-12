@@ -1,0 +1,86 @@
+/* Brand body font: Special Gothic Semi Extended (SIL OFL), see assets/fonts */
+@font-face { font-family: "Special Gothic"; src: url("../assets/fonts/SpecialGothic-SemiExtended-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Special Gothic"; src: url("../assets/fonts/SpecialGothic-SemiExtended-Semibold.ttf") format("truetype"); font-weight: 500 700; font-display: swap; }
+
+/*
+ * Second Nature design tokens.
+ * Colours from the Second Nature style sheet: forest #1B3417, bright green #E4FD9C,
+ * off-white #F6F5F1 and the room colours. Lichen, Mid Grey and Brick carry sentiment;
+ * platform colours are muted so the brand palette leads.
+ */
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --surface-2: #efede6;
+  --ink: #1b3417;
+  --ink-2: #3f4a3b;
+  --muted: #7d8076;
+  --line: #e1dccf;
+  --line-strong: #cfc8b8;
+
+  --forest: #1b3417;
+  --lime: #e4fd9c;
+  --lime-ink: #c3e06a;
+  --moss: #3d5a35;
+  --lichen: #9ba898;
+  --lichen-soft: #e5eadf;
+  --sand: #e4c578;
+  --clay: #f8cba4;
+  --sea: #b2c8c5;
+  --brick: #c4968c;
+  --brick-soft: #f3e4e0;
+  --mid-grey: #d9d9d9;
+
+  --ig: #b5577a;
+  --tt: #2e8f8a;
+  --web: #5f6f4e;
+
+  --good: #4f7a45;
+  --bad: #9a5245;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgba(35, 39, 31, .05), 0 2px 10px rgba(35, 39, 31, .04);
+  --rail: 76px;
+  --font: "Special Gothic", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "GT Alpina", "Lustria", Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1d18;
+    --surface: #22261f;
+    --surface-2: #2a2f26;
+    --ink: #ecebe4;
+    --ink-2: #c9c9bf;
+    --muted: #979a8f;
+    --line: #343a30;
+    --line-strong: #454c40;
+    --lichen-soft: #39422e;
+    --brick-soft: #4a2b23;
+    --forest: #cdd8b6;
+    --ig: #d27b9b;
+    --tt: #55b3ad;
+    --good: #8fb67f;
+    --bad: #d9826a;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1d18;
+  --surface: #22261f;
+  --surface-2: #2a2f26;
+  --ink: #ecebe4;
+  --ink-2: #c9c9bf;
+  --muted: #979a8f;
+  --line: #343a30;
+  --line-strong: #454c40;
+  --lichen-soft: #39422e;
+  --brick-soft: #4a2b23;
+  --forest: #cdd8b6;
+  --ig: #d27b9b;
+  --tt: #55b3ad;
+  --good: #8fb67f;
+  --bad: #d9826a;
+  --shadow: none;
+}
