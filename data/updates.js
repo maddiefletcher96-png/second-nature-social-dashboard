@@ -7,29 +7,191 @@
  * Hand-written notes and major/minor overrides live in js/update-notes.js and are never overwritten.
  */
 window.SN_UPDATES = {
-  checked: '2026-11-11',
-  items: [
-    { platform: 'tiktok', date: '2026-11-10', title: 'Daddy Yankee Returns With New Album La Postal, in Partnership With SoundOn', url: 'https://newsroom.tiktok.com/daddy-yankee-returns-with-new-album-la-postal-in-partnership-with-soundon', source: 'TikTok Newsroom', type: 'news' },
-    { platform: 'tiktok', date: '2026-11-04', title: 'Karol G brings No Me Arrepiento De Sentir Tanto to TikTok LIVE', url: 'https://newsroom.tiktok.com/karol-g-tiktok-premiere-live', source: 'TikTok Newsroom', type: 'news' },
-    { platform: 'tiktok', date: '2026-11-04', title: 'Veterans Day 2026: Honoring #VeteransofTikTok', url: 'https://newsroom.tiktok.com/veterans-day-2026-honoring-veteransoftiktok', source: 'TikTok Newsroom', type: 'news' },
-    { platform: 'tiktok', date: '2026-11-03', title: 'TikTok LIVE and the Lucas Museum of Narrative Art Bring the Hero’s Journey to Life in Exclusive Livestream', url: 'https://newsroom.tiktok.com/tiktok-live-and-the-lucas-museum-of-narrative-art-bring-the-heros-journey-to-life-in-exclusive-livestream', source: 'TikTok Newsroom', type: 'news' },
-    { platform: 'tiktok', date: '2026-11-02', title: 'TikTok and WTA announce global content partnership to connect the next generation of women\'s tennis fans', url: 'https://newsroom.tiktok.com/tiktok-and-wta-announce-global-content-partnership', source: 'TikTok Newsroom', type: 'news' },
-    { platform: 'instagram', date: '2026-10-26', title: 'Instagram tests Features: horizontal videos up to 90 minutes', summary: 'A test that lets selected creators upload horizontal videos up to 90 minutes, starting in Brazil and expanding to a small group in the US.', url: 'https://www.instagram.com/popular/instagrams-latest-updates/', source: 'Instagram latest updates', type: 'product' },
-    { platform: 'tiktok', date: '2026-10-14', title: 'What’s shaping the holiday season on TikTok Shop', url: 'https://newsroom.tiktok.com/whats-shaping-the-holiday-season-on-tiktok-shop', source: 'TikTok Newsroom', type: 'insight' },
-    { platform: 'tiktok', date: '2026-10-14', title: 'TikTok and MADE BY US STUDIOS Enter Strategic Partnership to Co-Produce Slate of Creator-Led Micro-Series', url: 'https://newsroom.tiktok.com/tiktok-and-made-by-us-studios-enter-partnership-to-co-produce-creator-led-micro-series', source: 'TikTok Newsroom', type: 'news' },
-    { platform: 'tiktok', date: '2026-10-13', title: 'TikTok’s Halloween Travel Guide: Haunting Destinations Inspired by #FilmTok, #BookTok and More', url: 'https://newsroom.tiktok.com/tiktoks-halloween-travel-guide-haunting-destinations-inspired-by-filmtok-booktok-and-more', source: 'TikTok Newsroom', type: 'insight' },
-    { platform: 'tiktok', date: '2026-10-05', title: 'TikTok Unveils AI-Powered Updates for Advertisers: Driving Discovery, Action, and Measurable Business Outcomes', url: 'https://newsroom.tiktok.com/tiktok-unveils-ai-powered-updates-for-advertisers-driving-discovery-action-and-measurable-business-outcomes', source: 'TikTok Newsroom', type: 'product' },
-    { platform: 'instagram', date: '2026-09-28', title: 'How to Make Instagram Reels: Complete 2026 Guide', url: 'https://about.instagram.com/blog/tips-and-tricks/how-to-make-instagram-reels', source: 'Instagram Blog', type: 'tips' },
-    { platform: 'instagram', date: '2026-09-25', title: 'Close Friends Only: Kai Cenat & Kaiya on VIVET', url: 'https://about.instagram.com/blog/announcements/instagram-close-friends-only-kai-cenat-kaiya-cenat', source: 'Instagram Blog', type: 'news' },
-    { platform: 'instagram', date: '2026-07-07', title: 'New Effects in Stories from Meta AI', summary: 'New AI effects in Instagram Stories using the latest capabilities in Meta AI.', url: 'https://about.instagram.com/blog/announcements/new-ai-effects-in-instagram-stories', source: 'Instagram Blog', type: 'product' },
-    { platform: 'instagram', date: '2026-07-02', title: 'How to Use Instagram Stories: Complete 2026 Guide', url: 'https://about.instagram.com/blog/tips-and-tricks/how-to-use-instagram-stories', source: 'Instagram Blog', type: 'tips' },
-    { platform: 'instagram', date: '2026-06-30', title: 'AI Glasses from Meta: New Instagram Tools for Creators', url: 'http://creators.instagram.com/blog/creator-toolkit-for-ai-glasses/', source: 'Instagram Blog', type: 'product' },
-    { platform: 'instagram', date: '2026-06-30', title: 'Close Friends Only: J Balvin & Ryan Castro Talk New Album', url: 'https://about.instagram.com/blog/announcements/j-balvin-ryan-castro-omerta-episode', source: 'Instagram Blog', type: 'news' },
-    { platform: 'instagram', date: '2026-06-22', title: 'Instagram for TV Gets Bigger: New Ways to Watch Together', summary: 'Instagram for TV is now on Samsung TVs in the US, with channels, casting Reels and Stories on the big screen, and horizontal video.', url: 'https://about.instagram.com/blog/announcements/instagram-tv-gets-bigger', source: 'Instagram Blog', type: 'product' },
-    { platform: 'instagram', date: '2026-06-04', title: 'Introducing Instagram Plus: More of What You Love', summary: 'A new subscription with exclusive features to help people express themselves, connect with friends and customise their experience.', url: 'https://about.instagram.com/blog/announcements/introducing-instagram-plus', source: 'Instagram Blog', type: 'product' },
-    { platform: 'instagram', date: '2026-05-19', title: 'KATSEYE and Larray Link Up on Instagram\'s \'Close Friends Only\' Podcast', url: 'https://about.instagram.com/blog/announcements/instagram-close-friends-only-katseye-larray-link-up', source: 'Instagram Blog', type: 'news' },
-    { platform: 'instagram', date: '2026-05-13', title: 'Introducing Instants: Share in the Moment on Instagram', summary: 'Instants makes it easy to share everyday photos in the moment. No edits, no pressure. On Instagram and as its own app.', url: 'https://about.instagram.com/blog/announcements/introducing-instants-for-sharing-in-the-moment', source: 'Instagram Blog', type: 'product' },
-    { platform: 'instagram', date: '2026-04-29', title: 'Original Creators Get Priority: New Instagram Algorithm', summary: 'Instagram ranking now favours original content over reposts and aggregator accounts.', url: 'http://creators.instagram.com/blog/rewarding-original-creators-on-instagram/', source: 'Instagram Blog', type: 'product' },
-    { platform: 'instagram', date: '2026-04-09', title: 'Best Camera & Export Settings for High-Quality Instagram Reels', url: 'http://creators.instagram.com/blog/best-camera-settings-instagram-reels/', source: 'Instagram Blog', type: 'tips' }
+  "checked": "2026-11-13",
+  "items": [
+    {
+      "platform": "tiktok",
+      "date": "2026-11-10",
+      "title": "Daddy Yankee Returns With New Album La Postal, in Partnership With SoundOn",
+      "url": "https://newsroom.tiktok.com/daddy-yankee-returns-with-new-album-la-postal-in-partnership-with-soundon",
+      "source": "TikTok Newsroom",
+      "type": "news"
+    },
+    {
+      "platform": "tiktok",
+      "date": "2026-11-04",
+      "title": "Karol G brings No Me Arrepiento De Sentir Tanto to TikTok LIVE",
+      "url": "https://newsroom.tiktok.com/karol-g-tiktok-premiere-live",
+      "source": "TikTok Newsroom",
+      "type": "news"
+    },
+    {
+      "platform": "tiktok",
+      "date": "2026-11-04",
+      "title": "Veterans Day 2026: Honoring #VeteransofTikTok",
+      "url": "https://newsroom.tiktok.com/veterans-day-2026-honoring-veteransoftiktok",
+      "source": "TikTok Newsroom",
+      "type": "news"
+    },
+    {
+      "platform": "tiktok",
+      "date": "2026-11-03",
+      "title": "TikTok LIVE and the Lucas Museum of Narrative Art Bring the Hero’s Journey to Life in Exclusive Livestream",
+      "url": "https://newsroom.tiktok.com/tiktok-live-and-the-lucas-museum-of-narrative-art-bring-the-heros-journey-to-life-in-exclusive-livestream",
+      "source": "TikTok Newsroom",
+      "type": "news"
+    },
+    {
+      "platform": "tiktok",
+      "date": "2026-11-02",
+      "title": "TikTok and WTA announce global content partnership to connect the next generation of women's tennis fans",
+      "url": "https://newsroom.tiktok.com/tiktok-and-wta-announce-global-content-partnership",
+      "source": "TikTok Newsroom",
+      "type": "news"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-10-26",
+      "title": "Instagram tests Features: horizontal videos up to 90 minutes",
+      "summary": "A test that lets selected creators upload horizontal videos up to 90 minutes, starting in Brazil and expanding to a small group in the US.",
+      "url": "https://www.instagram.com/popular/instagrams-latest-updates/",
+      "source": "Instagram latest updates",
+      "type": "product"
+    },
+    {
+      "platform": "tiktok",
+      "date": "2026-10-14",
+      "title": "What’s shaping the holiday season on TikTok Shop",
+      "url": "https://newsroom.tiktok.com/whats-shaping-the-holiday-season-on-tiktok-shop",
+      "source": "TikTok Newsroom",
+      "type": "insight"
+    },
+    {
+      "platform": "tiktok",
+      "date": "2026-10-14",
+      "title": "TikTok and MADE BY US STUDIOS Enter Strategic Partnership to Co-Produce Slate of Creator-Led Micro-Series",
+      "url": "https://newsroom.tiktok.com/tiktok-and-made-by-us-studios-enter-partnership-to-co-produce-creator-led-micro-series",
+      "source": "TikTok Newsroom",
+      "type": "news"
+    },
+    {
+      "platform": "tiktok",
+      "date": "2026-10-13",
+      "title": "TikTok’s Halloween Travel Guide: Haunting Destinations Inspired by #FilmTok, #BookTok and More",
+      "url": "https://newsroom.tiktok.com/tiktoks-halloween-travel-guide-haunting-destinations-inspired-by-filmtok-booktok-and-more",
+      "source": "TikTok Newsroom",
+      "type": "insight"
+    },
+    {
+      "platform": "tiktok",
+      "date": "2026-10-05",
+      "title": "TikTok Unveils AI-Powered Updates for Advertisers: Driving Discovery, Action, and Measurable Business Outcomes",
+      "url": "https://newsroom.tiktok.com/tiktok-unveils-ai-powered-updates-for-advertisers-driving-discovery-action-and-measurable-business-outcomes",
+      "source": "TikTok Newsroom",
+      "type": "product",
+      "summary": "TikTok is the world's leading destination for short-form mobile videos. Our mission is to capture and present the world's creativity, knowledge, and moments that matter in everyday life. TikTok empowers everyone to be a creator directly from their smartphones, and is committed to building a community by encouraging users to share their passion and creative expression through their videos."
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-09-28",
+      "title": "How to Make Instagram Reels: Complete 2026 Guide",
+      "url": "https://about.instagram.com/blog/tips-and-tricks/how-to-make-instagram-reels",
+      "source": "Instagram Blog",
+      "type": "tips"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-09-25",
+      "title": "Close Friends Only: Kai Cenat & Kaiya on VIVET",
+      "url": "https://about.instagram.com/blog/announcements/instagram-close-friends-only-kai-cenat-kaiya-cenat",
+      "source": "Instagram Blog",
+      "type": "news"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-07-07",
+      "title": "New Effects in Stories from Meta AI",
+      "summary": "New AI effects in Instagram Stories using the latest capabilities in Meta AI.",
+      "url": "https://about.instagram.com/blog/announcements/new-ai-effects-in-instagram-stories",
+      "source": "Instagram Blog",
+      "type": "product"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-07-02",
+      "title": "How to Use Instagram Stories: Complete 2026 Guide",
+      "url": "https://about.instagram.com/blog/tips-and-tricks/how-to-use-instagram-stories",
+      "source": "Instagram Blog",
+      "type": "tips"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-06-30",
+      "title": "AI Glasses from Meta: New Instagram Tools for Creators",
+      "url": "http://creators.instagram.com/blog/creator-toolkit-for-ai-glasses/",
+      "source": "Instagram Blog",
+      "type": "product",
+      "summary": "Discover the creator toolkit for AI glasses from Meta. Use spin view, multi-cam, and native editing tools to elevate your Instagram Stories. Start creating today!"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-06-30",
+      "title": "Close Friends Only: J Balvin & Ryan Castro Talk New Album",
+      "url": "https://about.instagram.com/blog/announcements/j-balvin-ryan-castro-omerta-episode",
+      "source": "Instagram Blog",
+      "type": "news"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-06-22",
+      "title": "Instagram for TV Gets Bigger: New Ways to Watch Together",
+      "summary": "Instagram for TV is now on Samsung TVs in the US, with channels, casting Reels and Stories on the big screen, and horizontal video.",
+      "url": "https://about.instagram.com/blog/announcements/instagram-tv-gets-bigger",
+      "source": "Instagram Blog",
+      "type": "product"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-06-04",
+      "title": "Introducing Instagram Plus: More of What You Love",
+      "summary": "A new subscription with exclusive features to help people express themselves, connect with friends and customise their experience.",
+      "url": "https://about.instagram.com/blog/announcements/introducing-instagram-plus",
+      "source": "Instagram Blog",
+      "type": "product"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-05-19",
+      "title": "KATSEYE and Larray Link Up on Instagram's 'Close Friends Only' Podcast",
+      "url": "https://about.instagram.com/blog/announcements/instagram-close-friends-only-katseye-larray-link-up",
+      "source": "Instagram Blog",
+      "type": "news"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-05-13",
+      "title": "Introducing Instants: Share in the Moment on Instagram",
+      "summary": "Instants makes it easy to share everyday photos in the moment. No edits, no pressure. On Instagram and as its own app.",
+      "url": "https://about.instagram.com/blog/announcements/introducing-instants-for-sharing-in-the-moment",
+      "source": "Instagram Blog",
+      "type": "product"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-04-29",
+      "title": "Original Creators Get Priority: New Instagram Algorithm",
+      "summary": "Instagram ranking now favours original content over reposts and aggregator accounts.",
+      "url": "http://creators.instagram.com/blog/rewarding-original-creators-on-instagram/",
+      "source": "Instagram Blog",
+      "type": "product"
+    },
+    {
+      "platform": "instagram",
+      "date": "2026-04-09",
+      "title": "Best Camera & Export Settings for High-Quality Instagram Reels",
+      "url": "http://creators.instagram.com/blog/best-camera-settings-instagram-reels/",
+      "source": "Instagram Blog",
+      "type": "tips"
+    }
   ]
 };
