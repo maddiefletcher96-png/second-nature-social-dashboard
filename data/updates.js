@@ -7,7 +7,7 @@
  * Hand-written notes and major/minor overrides live in js/update-notes.js and are never overwritten.
  */
 window.SN_UPDATES = {
-  "checked": "2026-11-21",
+  "checked": "2026-11-22",
   "items": [
     {
       "platform": "tiktok",
